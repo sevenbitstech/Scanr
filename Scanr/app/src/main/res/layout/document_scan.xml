@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/tv_note_drive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent2"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:text="@string/str_note_drive_connection"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_personal_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text="Information"
+                android:textColor="@color/Gray"
+                android:textSize="25dp" />
+
+            <View
+                android:id="@+id/view_personal_info"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/Gray" />
+
+            <ImageView
+                android:id="@+id/img_document"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_weight="80"
+                android:adjustViewBounds="true"
+                android:paddingTop="20dp"
+                android:src="@drawable/filelogo"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_nxt"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="10"
+                android:background="@drawable/next"
+                android:padding="5dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/common_docs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="Information"
+                    android:textColor="@color/Gray"
+                    android:textSize="16dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/Gray" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/lightgray"
+                    android:drawableLeft="@drawable/panname"
+                    android:drawablePadding="5dp"
+                    android:hint="Document Holder's Name"
+                    android:padding="15dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="14dp">
+
+                    <requestFocus />
+                </EditText>
+
+                <LinearLayout
+                    android:id="@+id/llpancard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/etCardno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/gainsboro"
+                        android:drawableLeft="@drawable/panno"
+                        android:drawablePadding="5dp"
+                        android:hint="Document Number"
+                        android:padding="15dp"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/etbirthdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/lightgray"
+                        android:drawableLeft="@drawable/calendar"
+                        android:drawablePadding="5dp"
+                        android:focusable="false"
+                        android:hint="Document Holder's BirthDate"
+                        android:longClickable="false"
+                        android:padding="15dp"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llDatePlace"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:id="@+id/llDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="Valid Through/Till Date"
+                                android:textColor="@color/Actionbar"
+                                android:textSize="16dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/Gray" />
+
+                            <EditText
+                                android:id="@+id/etDocumentDateValidThrough"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/lightgray"
+                                android:drawableLeft="@drawable/calendar"
+                                android:drawablePadding="5dp"
+                                android:focusable="false"
+                                android:hint="Document Valid through Date"
+                                android:longClickable="false"
+                                android:padding="15dp"
+                                android:paddingLeft="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="14dp">
+
+                                <requestFocus />
+                            </EditText>
+
+                            <EditText
+                                android:id="@+id/etDocumentDateValidTill"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/gainsboro"
+                                android:drawableLeft="@drawable/calendar"
+                                android:drawablePadding="5dp"
+                                android:focusable="false"
+                                android:hint="Document Valid till Date"
+                                android:longClickable="false"
+                                android:padding="15dp"
+                                android:paddingLeft="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="14dp">
+
+                                <requestFocus />
+                            </EditText>
+
+                            <TextView
+                                android:id="@+id/txt_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:paddingTop="2dp"
+                                android:text="hhjkhjkhkj"
+                                android:textColor="@color/salmon"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llplace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="Place Of Birth/Place Of Issue"
+                                android:textColor="@color/Actionbar"
+                                android:textSize="16dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/Gray" />
+
+                            <EditText
+                                android:id="@+id/etDocumentBirthPlace"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/lightgray"
+                                android:drawableLeft="@drawable/location"
+                                android:drawablePadding="5dp"
+                                android:hint="Document Holder's Birth Place"
+                                android:padding="15dp"
+                                android:paddingLeft="5dp"
+                                android:textSize="14dp">
+
+                                <requestFocus />
+                            </EditText>
+
+                            <EditText
+                                android:id="@+id/etDocumentPlaceIssue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/gainsboro"
+                                android:drawableLeft="@drawable/location"
+                                android:drawablePadding="5dp"
+                                android:hint="Document's Issue Place"
+                                android:padding="15dp"
+                                android:paddingLeft="5dp"
+                                android:textSize="14dp">
+
+                                <requestFocus />
+                            </EditText>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/border"
+                    android:padding="15dp"
+                    android:text="Save"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_scan_more_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/border"
+                    android:padding="15dp"
+                    android:text="Scan More Pages"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/border"
+                    android:padding="15dp"
+                    android:text="Cancel"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:adSize="BANNER"
+        app:adUnitId="@string/banner_ad_unit_id" />
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:text="Information"-->
+    <!--android:textColor="@color/Actionbar"-->
+    <!--android:textSize="25dp"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/Gray"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_document"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:adjustViewBounds="true"-->
+    <!--android:paddingTop="20dp"-->
+    <!--android:src="@drawable/filelogo"-->
+    <!--android:layout_weight="80"-->
+    <!--android:visibility="visible"/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_nxt"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:padding="5dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:visibility="gone"-->
+    <!--android:background="@drawable/next"-->
+    <!--android:layout_weight="10"/>-->
+
+    <!--<LinearLayout android:id="@+id/common_docs"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="visible">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt_personal_info"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:text="Personal Information"-->
+    <!--android:textColor="@color/Actionbar"-->
+    <!--android:textSize="16dp"/>-->
+
+    <!--<View-->
+    <!--android:id="@+id/view_personal_info"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/Gray"/>-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/etName"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginTop="25dp"-->
+    <!--android:background="@color/lightgray"-->
+    <!--android:drawableLeft="@drawable/panname"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:hint="Document Holder's Name"-->
+    <!--android:padding="15dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:textSize="14dp">-->
+    <!--<requestFocus/>-->
+    <!--</EditText>-->
+
+    <!--<LinearLayout android:id="@+id/llpancard"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/etCardno"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/gainsboro"-->
+    <!--android:drawableLeft="@drawable/panno"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:hint="Document Number"-->
+    <!--android:padding="15dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:singleLine="true"-->
+    <!--android:textSize="14dp"/>-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/etbirthdate"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/lightgray"-->
+    <!--android:drawableLeft="@drawable/calendar"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:focusable="false"-->
+    <!--android:hint="Document Holder's BirthDate"-->
+    <!--android:longClickable="false"-->
+    <!--android:padding="15dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:singleLine="true"-->
+    <!--android:textSize="14dp"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llDatePlace"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+
+    <!--<LinearLayout android:id="@+id/llDate"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:text="Valid Through/Till Date"-->
+    <!--android:textColor="@color/Actionbar"-->
+    <!--android:textSize="16dp"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/Gray"/>-->
+    <!--<EditText-->
+    <!--android:id="@+id/etDocumentDateValidThrough"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/lightgray"-->
+    <!--android:drawableLeft="@drawable/calendar"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:focusable="false"-->
+    <!--android:hint="Document Valid through Date"-->
+    <!--android:longClickable="false"-->
+    <!--android:padding="15dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="14dp">-->
+    <!--<requestFocus/>-->
+    <!--</EditText>-->
+    <!--<EditText-->
+    <!--android:id="@+id/etDocumentDateValidTill"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/gainsboro"-->
+    <!--android:drawableLeft="@drawable/calendar"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:focusable="false"-->
+    <!--android:hint="Document Valid till Date"-->
+    <!--android:longClickable="false"-->
+    <!--android:padding="15dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="14dp">-->
+    <!--<requestFocus/>-->
+    <!--</EditText>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt_error"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:paddingTop="2dp"-->
+    <!--android:text="hhjkhjkhkj"-->
+    <!--android:visibility="gone"-->
+    <!--android:textColor="@color/salmon"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llplace"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="visible">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:text="Place Of Birth/Place Of Issue"-->
+    <!--android:textColor="@color/Actionbar"-->
+    <!--android:textSize="16dp"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/Gray"/>-->
+    <!--<EditText-->
+    <!--android:id="@+id/etDocumentBirthPlace"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/lightgray"-->
+    <!--android:drawableLeft="@drawable/location"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:hint="Document Holder's Birth Place"-->
+    <!--android:padding="15dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:textSize="14dp">-->
+    <!--<requestFocus/>-->
+    <!--</EditText>-->
+    <!--<EditText-->
+    <!--android:id="@+id/etDocumentPlaceIssue"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/gainsboro"-->
+    <!--android:drawableLeft="@drawable/location"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:hint="Document's Issue Place"-->
+    <!--android:padding="15dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:textSize="14dp">-->
+    <!--<requestFocus/>-->
+    <!--</EditText>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:weightSum="100">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_save"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_weight="50"-->
+    <!--android:background="@drawable/border"-->
+    <!--android:padding="15dp"-->
+    <!--android:text="Save"/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_cancel"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_weight="50"-->
+    <!--android:background="@drawable/bordergray"-->
+    <!--android:padding="15dp"-->
+    <!--android:text="Cancel"/>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+</LinearLayout>

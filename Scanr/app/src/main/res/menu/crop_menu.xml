@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_crop_full"
+        android:icon="@drawable/fullscreen_24"
+        android:title="Full Screen"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_crop"
+        android:icon="@drawable/crop_24"
+        android:title="Crop"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_rotate_left"
+        android:icon="@drawable/rotate_left_24"
+        android:title="Rottate left"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_rotate_right"
+        android:icon="@drawable/rotate_right_24"
+        android:title="Rotate Right"
+        app:showAsAction="always" />
+</menu>

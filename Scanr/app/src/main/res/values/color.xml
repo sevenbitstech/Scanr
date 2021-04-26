@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_theme">#2A3638</color>
+    <color name="viewfinder_border">#489cdf</color>
+    <!--++++++++++++++++++++-->
+    <!--listview item colors-->
+    <!--++++++++++++++++++++-->
+    <color name="listview_pressed">#FFdddddd</color>
+    <color name="listview_focused">#FF7dbcd3</color>
+    <color name="listview_checked">#FFededed</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="gray">#808080</color>
+    <color name="lightgray">#80808080</color>
+    <color name="selectedgray">#30808080</color>
+    <color name="Pancard">#489cdf</color>
+    <color name="Pancardlight">#91c3eb</color>
+    <color name="Gray">#696969</color>
+    <color name="Actionbar">@color/app_dark</color>
+    <color name="White">#ffffff</color>
+    <color name="offWhite">#90ffffff</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="salmon">#FA8072</color>
+    <color name="lightsalmon">#50FA8072</color>
+    <!--    <color name="green">#60008000</color>-->
+    <!--    <color name="colorPrimary">#3F51B5</color>-->
+    <!--    <color name="colorPrimaryDark">#303F9F</color>-->
+    <!--    <color name="colorAccent">#FF4081</color>-->
+    <color name="colorBlackFortyPercentAlpha">#66000000</color>
+    <!--    <color name="white">#FFFFFF</color>-->
+    <color name="green">#26d84c</color>
+
+    <color name="crop_color">#00d1fe</color>
+
+    <!--<color name="primary_color">#499dde</color>-->
+    <color name="secondary_color">#64abe2</color>
+    <color name="secondary_color2">#B764ABE2</color>
+
+    <color name="colorPrimary">#00bcd4</color>
+    <color name="colorPrimaryDark">#0097a7</color>
+    <color name="colorAccent">#f2fe71</color>
+    <color name="colorAccent2">#FFC765</color>
+
+    <color name="bg_register">#2e3237</color>
+
+    <color name="semi_transparent">#9A000000</color>
+    <color name="transparent">@android:color/transparent</color>
+
+    <color name="color_divider">#f2f2f2</color>
+    <!--<color name="btn_add_pink">#d71a5f</color>-->
+
+    <color name="app_ligh">@color/center_color</color>
+    <color name="app_dark">@color/primary_blue</color>
+
+
+    <!--##########################################################################################################-->
+    <!--new design colors-->
+
+    <!--if theme is 4e3078 than -->
+
+    <!--refference : https://mycolor.space/?hex=%23FFFFFF&sub=1-->
+
+    <color name="primary_blue">#4e3078</color>
+    <!--Use this in text when bg is primary blue-->
+    <color name="primary_blue_text_bg">#FCF8FF</color>
+    <color name="secondary_blue">#9D88B3</color>
+    <color name="center_color">#765b95</color>
+    <color name="secondary_blue_alpha">#119D88B3</color>
+    <color name="dark_purple">#4B4453</color>
+    <color name="theme_grey">#7C7484</color>
+
+    <color name="red_light">#F78485</color>
+    <color name="pink_light">#E287DF</color>
+
+    <color name="sky_blue">#6CC9D2</color>
+    <color name="green_ligh">#7090DF</color>
+
+    <color name="purple_light">#8f6fee</color>
+    <color name="blue_light">#577cd6</color>
+
+
+    <color name="primary_color">#292172</color>
+
+
+    <color name="theme_blue_text_color">#89ADFF</color>
+    <color name="color_orange">#FFAA39</color>
+    <color name="dark_gray">#2F2E3A</color>
+    <color name="light_gray">#6F6D80</color>
+    <color name="app_bg">#F6F6FA</color>
+</resources>

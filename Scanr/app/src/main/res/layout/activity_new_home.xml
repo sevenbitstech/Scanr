@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pancard.android.activity.newflow.activity.NewHomeActivity">
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/transparent"
+        android:padding="1dp"
+        app:layout_constraintBottom_toTopOf="@id/coordinator"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="1dp"
+        android:visibility="gone"
+        app:adSize="BANNER"
+        app:adUnitId="@string/banner_ad_unit_id"
+        app:layout_constraintBottom_toTopOf="@id/coordinator" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bottom_dash"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:contentInsetStart="0dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigation_view"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                app:menu="@menu/bottom_menu" />
+
+
+            <!--app:itemBackground="@android:color/white"-->
+            <!--app:itemIconTint="@drawable/nav_item_colors"-->
+            <!--app:itemTextColor="@drawable/nav_item_colors"-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottom_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:background="@color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_files_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/camera_tab"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.33">
+
+                    <TextView
+                        android:id="@+id/tv_my_files"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans"
+                        android:text="My Files"
+                        android:textFontWeight="600"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/img_my_files"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_my_files"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:src="@drawable/my_files_36"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_my_files"
+                        app:layout_constraintRight_toLeftOf="@id/tv_my_files"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/camera_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.33">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_camera"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:src="@drawable/camera_navigation"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/settings_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/camera_tab"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.33">
+
+                    <TextView
+                        android:id="@+id/tv_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans"
+                        android:text="Settings"
+                        android:textFontWeight="600"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/img_settings"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_settings"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:src="@drawable/settings"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/tv_settings"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                <View-->
+                <!--                    android:id="@+id/view_dash_files"-->
+                <!--                    android:layout_width="20dp"-->
+                <!--                    android:layout_height="4dp"-->
+                <!--                    android:background="@drawable/bottom_dash"-->
+                <!--                    app:layout_constraintLeft_toLeftOf="@id/settings_tab"-->
+                <!--                    app:layout_constraintRight_toRightOf="@id/settings_tab"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    />-->
+
+                <!--                <View-->
+                <!--                    android:layout_width="25dp"-->
+                <!--                    android:layout_height="5dp"-->
+                <!--                    android:background="@drawable/bottom_dash"-->
+                <!--                    app:layout_constraintLeft_toLeftOf="@id/camera_tab"-->
+                <!--                    app:layout_constraintRight_toRightOf="@id/camera_tab"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    />-->
+
+                <!--                <View-->
+                <!--                    android:layout_width="25dp"-->
+                <!--                    android:layout_height="5dp"-->
+                <!--                    android:background="@drawable/bottom_dash"-->
+                <!--                    app:layout_constraintLeft_toLeftOf="@id/settings_tab"-->
+                <!--                    app:layout_constraintRight_toRightOf="@id/settings_tab"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:padding="10dp"
+            android:src="@drawable/camera_navigation_64"
+            android:visibility="gone" />
+        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_anchor="@id/bottom_app_bar"-->
+        <!--app:layout_anchorGravity="center"-->
+        <!--android:src="@drawable/gallery_white_64"/>-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item-->
+    <!--android:id="@+id/contact"-->
+    <!--android:icon="@android:drawable/ic_menu_help"-->
+    <!--android:title="Contact"/>-->
+
+    <item
+        android:icon="@android:drawable/alert_dark_frame"
+        android:title="PIN"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@android:drawable/alert_dark_frame"
+        android:title="Profile"
+        android:visible="false" />
+    <item
+        android:id="@+id/view_files"
+        android:actionMenuTextColor="@color/Gray"
+        android:icon="@android:drawable/alert_dark_frame"
+        android:title="@string/all_files" />
+
+    <item
+        android:id="@+id/help"
+        android:icon="@android:drawable/alert_dark_frame"
+        android:title="Help" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@android:drawable/alert_dark_frame"
+        android:title="Logout"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/setting"
+        android:actionMenuTextColor="@color/Gray"
+        android:icon="@android:drawable/alert_dark_frame"
+        android:title="Setting" />
+
+</menu>

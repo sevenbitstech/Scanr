@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.docscan.android"
+    android:versionCode="5058"
+    android:versionName="5.0.38">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:name="com.pancard.android.Scanner"
+        android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:extractNativeLibs="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ds_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Scanr.Theme"
+        tools:ignore="UnusedAttribute"
+        tools:replace="android:appComponentFactory">
+
+        <activity android:name=".LoginScreenDemo" />
+        <activity
+            android:name="com.pancard.android.activity.newflow.activity.ProVersionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pancard.android.activity.newflow.activity.inappbilling.InAppBillingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pancard.android.activity.newflow.activity.CropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pancard.android.activity.newflow.activity.DragDropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pancard.android.activity.newflow.activity.DocumentDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pancard.android.activity.newflow.activity.NewHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pancard.android.activity.otheracivity.QRCodeScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pancard.android.activity.otheracivity.DocumentSuccessActivity"
+            android:theme="@style/AppTheme.NoActionBarCustom" />
+        <activity
+            android:name="com.pancard.android.activity.otheracivity.InfoActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/NoTitleDialog" />
+        <activity
+            android:name="com.pancard.android.activity.otheracivity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pancard.android.newflow.activity.DocumentsListActivity"
+            android:theme="@style/AppTheme.NoActionBarCustom" />
+        <activity
+            android:name="com.pancard.android.activity.scanactivity.DriveAccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pancard.android.newflow.activity.ScanDocActivity"
+            android:label="@string/title_activity_scan_doc"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.pancard.android.newflow.activity.BottomBarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarCustom" />
+        <activity
+            android:name="com.pancard.android.liveedgedetection.ScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarCustom" />
+        <activity
+            android:name="com.pancard.android.activity.newflow.activity.IntroductionSliderActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_application_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.pancard.android.activity.otheracivity.LoginActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity android:name="com.pancard.android.activity.scanactivity.SpecificPage" />
+        <activity android:name="com.pancard.android.activity.newflow.activity.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.pancard.android.documentscanner.activities.MainActivity" />
+        <activity android:name="com.pancard.android.activity.otheracivity.ContactUs" />
+        <activity
+            android:name="com.pancard.android.activity.otheracivity.DocumentScan"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.pancard.android.activity.otheracivity.CommonScan"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.pancard.android.activity.scanactivity.CardScanActivity" />
+        <activity android:name="com.pancard.android.activity.scanactivity.ListActivity" />
+        <activity android:name="com.pancard.android.activity.scanactivity.ListActivity2" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name="com.pancard.android.activity.otheracivity.ProfileActivity" />
+        <activity
+            android:name="com.pancard.android.activity.otheracivity.AppLockScrenn"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.pancard.android.activity.scanactivity.FullScreenImageviewerActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name="com.pancard.android.activity.scanactivity.QRCodeResultActivity" />
+        <activity android:name="com.pancard.android.activity.otheracivity.QRCodeScanner" />
+        <activity android:name="com.pancard.android.activity.otheracivity.CameraActivity" />
+        <activity android:name="com.pancard.android.activity.scanactivity.DriveListActivity" />
+        <activity android:name="com.pancard.android.activity.otheracivity.HomeActivity" />
+        <activity android:name="com.pancard.android.activity.common.SignInActivity" />
+        <activity android:name="com.pancard.android.activity.otheracivity.MaterialBarcodeScannerActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_application_id" />
+        <receiver
+            android:name="com.pancard.android.receiver.ConnectivityChangeReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.pancard.android.receiver.DriveSyncService"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="sfsdfsdfsdfsdfsdfsdfsdfsdfsdf" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-123456789~123456789" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.docscan.android.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fileprovider" />
+        </provider>
+    </application>
+
+</manifest>

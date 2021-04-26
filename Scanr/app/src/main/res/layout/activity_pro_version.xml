@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pro_screen_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        tools:context="com.pancard.android.activity.newflow.activity.ProVersionActivity">
+
+        <ImageView
+            android:id="@+id/img_back_button"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/md_nav_back"
+            android:visibility="visible"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ds_logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/yello_rounded"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Pro"
+                android:textColor="@color/primary_color"
+                android:textFontWeight="900"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Join now and unlock all features"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+        <RelativeLayout
+            android:id="@+id/pro_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/pro_white_boarder"
+            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_pro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="3 Days free trial "
+                    android:textColor="@color/white"
+                    android:textFontWeight="800"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pro"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="Then $2.99/year, auto-renewable"
+                    android:textColor="@color/white"
+                    android:textFontWeight="200"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_enter_pro"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:src="@drawable/circle_boarder"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/list_item"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/export" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="Unlimited scans and exports"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/noads" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="No Ads "
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ocr_pro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="Text Recognition(OCR)"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_pro_verion_ripple"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Get Started"
+            android:textColor="@color/primary_color"
+            android:textFontWeight="600"
+            android:textSize="20dp"
+            app:backgroundTint="@null" />
+
+        <TextView
+            android:id="@+id/tv_limited_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/opensans"
+            android:gravity="center"
+            android:text="@string/text_pro"
+            android:textColor="@color/secondary_blue"
+            android:textFontWeight="600"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

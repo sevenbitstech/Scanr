@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:innerRadius="5dp"
+    android:shape="oval"
+    android:useLevel="true">
+    <solid android:color="@color/white" />
+    <stroke
+        android:width="5dp"
+        android:color="@color/gray"></stroke>
+    <solid android:color="@color/transparent" />
+    <size
+        android:width="40dp"
+        android:height="40dp" />
+    <corners android:radius="@dimen/card_album_radius" />
+</shape>

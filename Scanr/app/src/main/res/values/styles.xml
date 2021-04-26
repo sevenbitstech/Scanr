@@ -1,0 +1,137 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/secondary_color</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Example</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--
+                    Theme customizations available in newer API levels can go in
+                    res/values-vXX/styles.xml, while customizations related to
+                    backward-compatibility can go here.
+                -->
+    </style>
+
+    <style name="NoTitleDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="scanr.theme.Base" parent="AppBaseTheme">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryDark">@color/primary_color</item>
+        <item name="colorAccent">@color/color_orange</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <!--<item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>-->
+    </style>
+
+    <style name="Scanr.Theme" parent="scanr.theme.Base">
+        <item name="colorControlNormal">@color/White</item>
+        <item name="android:fontFamily">@font/opensans</item>
+
+    </style>
+
+    <style name="TextShadow">
+        <item name="android:shadowColor">@color/colorBlackFortyPercentAlpha</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="PopupMenu.Example" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">#efefef</item>
+    </style>
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!-- Required for pre-Lollipop. -->
+        <item name="overlapAnchor">false</item>
+
+        <!-- Required for Lollipop. -->
+
+        <item name="android:dropDownVerticalOffset">4.0dip</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBarCustom">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!--        <item name="panelBackground">@color/transparent</item>-->
+        <!--        <item name="android:windowDisablePreview">true</item>-->
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="pin_edittext_style">
+        <item name="android:gravity">center</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:minEms">2</item>
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="ToolbarColoredBackArrow" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorSecondary">@color/White</item>
+    </style>
+
+    <style name="DashboardTitle">
+        <item name="android:textSize">10pt</item>
+        <item name="android:textColor">@color/app_dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@string/action_settings</item>
+    </style>
+    <!--app:cardCornerRadius="10dp"-->
+    <!--app:cardElevation="10dp"-->
+    <!--app:cardMaxElevation="10dp"-->
+    <!--app:contentPadding="10dp"-->
+    <!--android:background="@drawable/round_button"-->
+    <!--android:backgroundTint="@color/app_lightest"-->
+    <!--android:layout_margin="20dp"-->
+    <style name="CategoryNameStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="dialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_short_duration</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_short_duration</item>
+    </style>
+
+    <style name="Theme_Dialog_SCANR" parent="Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="SwitchStyle" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/color_orange</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/white</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/theme_blue_text_color
+        </item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottomsheet_shape</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/primary_color</item>
+        <item name="colorControlActivated">@color/primary_color</item>
+        <item name="colorControlHighlight">@color/primary_color</item>
+    </style>
+</resources>

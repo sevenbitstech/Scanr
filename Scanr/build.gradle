@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.4'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.5.2'
+        classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.5.3"
+        classpath 'com.google.gms:google-services:4.3.5'
+        classpath 'com.github.triplet.gradle:play-publisher:1.2.0'
+    }
+}
+
+task assemble {}
+
+ext {
+    sdkVersion = 23
+    buildToolsVersion = '23.0.3'
+}
+
+wrapper {
+    gradleVersion = '4.4'
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        google()
+    }
+}

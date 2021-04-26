@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.codearte.nexus-staging'
+repositories {
+    mavenCentral()
+}
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 30
+        applicationId "com.creditcard.android"
+        consumerProguardFiles 'release-proguard.cfg'
+    }
+    signingConfigs {
+        Pancard_Release {
+            keyAlias 'pancard_alias'
+            keyPassword '9UrTWW3zvUZQr3A'
+            storeFile file('../keystore/Pancard_Keystore.jks')
+            storePassword 'NAjC0XkqOc8dfft'
+        }
+        Pancard_Development {
+            keyAlias 'pancard_alias_dev'
+            keyPassword 'Bgsdpqfwef2vJ'
+            storeFile file('../keystore/Pancard_Keystore.jks')
+            storePassword 'qapflWk23dfHbz'
+        }
+    }
+
+    sourceSets.main {
+        jni.srcDirs = []
+        jniLibs.srcDir 'src/main/libs'
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-build.cfg'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-build.cfg'
+            signingConfig signingConfigs.Pancard_Development
+        }
+    }
+}
+dependencies {
+    implementation 'com.google.android.gms:play-services-vision:20.1.0'
+}

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_note_drive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent2"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:text="@string/str_note_drive"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <!--android:layout_height="match_parent"-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.05"
+            android:background="@drawable/background_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="50dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/selectedgray">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="visible">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/file_search"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/tab_to_scan"
+                        android:textColor="@color/Pancard"
+                        android:textSize="23dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/app_name"
+                        android:textColor="@color/primary_color"
+                        android:textSize="26dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/pancard_image"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="checkPermissionAndOpenGallery"
+                        android:padding="15dp"
+                        android:text="@string/scan_gallery"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/document"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onGeneralScan"
+                        android:padding="15dp"
+                        android:text="@string/scan_document"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/document"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onImproveGeneralScan"
+                        android:padding="15dp"
+                        android:text="@string/scan_document"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/pancard_image"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onDocumentScan"
+                        android:padding="15dp"
+                        android:text="@string/scan_business_card"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/barcode"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onBarcodeScan"
+                        android:padding="15dp"
+                        android:text="@string/scan_barcode"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/pancard_image"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onCreditCardScan"
+                        android:padding="15dp"
+                        android:text="@string/scan_creditcard"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/pancard_image"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onAadharCardScan"
+                        android:padding="15dp"
+                        android:text="@string/scan_aadharcard"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/pancard_image"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onPanCardScan"
+                        android:padding="15dp"
+                        android:text="@string/scan_pancard"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/pancard_formats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/err_select_format"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:onClick="onPanCardScan1"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/pancard_one" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:onClick="onPanCardScan2"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/pancard_two" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:onClick="onFormatLicenseScan_3"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/formate_three"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/passport"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onPassPortScan"
+                        android:padding="15dp"
+                        android:text="@string/scan_passport"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bordelinearborder"
+                            android:drawableTop="@drawable/license"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:onClick="onLicenseScan"
+                            android:padding="15dp"
+                            android:text="@string/scan_licence"
+                            android:textColor="@color/Gray"
+                            android:textSize="24dp" />
+
+                        <LinearLayout
+                            android:id="@+id/licence_formate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/bordelinearborder"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:text="@string/err_select_format"
+                                android:textSize="20dp" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:onClick="onFormatLicenseScan_1"
+                                android:paddingTop="10dp"
+                                android:src="@drawable/formate_one" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:onClick="onFormatLicenseScan_2"
+                                android:paddingTop="10dp"
+                                android:src="@drawable/formate_two_" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:onClick="onFormatLicenseScan_3"
+                                android:paddingTop="10dp"
+                                android:src="@drawable/formate_three"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/small"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onAllCard"
+                        android:padding="15dp"
+                        android:text="@string/all_files"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bordelinearborder"
+                        android:drawableTop="@drawable/share"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:onClick="onShare"
+                        android:padding="15dp"
+                        android:text="@string/share_app"
+                        android:textColor="@color/Gray"
+                        android:textSize="24dp" />
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="@string/banner_ad_unit_id" />
+
+    </RelativeLayout>
+</LinearLayout>

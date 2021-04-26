@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="list_item__contact_imageview_size">50dp</dimen>
+    <dimen name="list_item_name_size">16dp</dimen>
+    <dimen name="list_item_time_text_size">12dp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="pin_content_layout_padding">40dp</dimen>
+    <dimen name="pin_label_margin">10dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="card_album_radius">5dp</dimen>
+    <dimen name="doc_title_padding">10dp</dimen>
+    <dimen name="docs_count_padding_bottom">5dp</dimen>
+    <dimen name="docs_count">12dp</dimen>
+
+</resources>

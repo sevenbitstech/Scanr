@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottomsheet_shape"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <!--app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"-->
+
+        <ImageView
+            android:id="@+id/img_up_arrow"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:src="@drawable/downarrow"
+            android:tint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_bottom_sheet_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/opensans"
+            android:text="@string/str_scanned_text"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_up_arrow" />
+
+        <ImageView
+            android:id="@+id/img_edit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/edit_white"
+            android:tint="@color/white"
+            app:layout_constraintRight_toLeftOf="@id/img_share"
+            app:layout_constraintTop_toBottomOf="@id/img_up_arrow" />
+
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/share_white"
+            android:tint="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_up_arrow" />
+
+        <EditText
+            android:id="@+id/tv_detail_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:enabled="false"
+            android:fontFamily="@font/opensans"
+            android:text="@string/str_lorem_ipsum"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/img_save"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bottom_sheet_title"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/img_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/save_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/cancel"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

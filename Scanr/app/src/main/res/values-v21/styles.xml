@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+
+    <style name="Scanr.Theme" parent="scanr.theme.Base">
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap" tools:targetApi="lollipop">true
+        </item>
+        <item name="android:windowAllowReturnTransitionOverlap" tools:targetApi="lollipop">true
+        </item>
+        <item name="android:windowSharedElementEnterTransition" tools:targetApi="lollipop">
+            @android:transition/move
+        </item>
+        <item name="android:windowSharedElementExitTransition" tools:targetApi="lollipop">
+            @android:transition/move
+        </item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="android:fontFamily">@font/opensans</item>
+        <!--<item name="colorControlNormal">@color/edittext_normal_control_color</item>-->
+        <!--<item name="android:colorControlActivated">@color/primary</item>-->
+
+        <!--<item name="actionModeStyle">@style/ActionModeStyle</item>-->
+        <!--<item name="actionModeCloseButtonStyle">@style/myclosebutton</item>-->
+    </style>
+
+</resources>

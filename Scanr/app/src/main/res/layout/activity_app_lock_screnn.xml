@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:text="Skip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/pin_content_layout_padding">
+
+        <TextView
+            android:id="@+id/typemessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/pin_label_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/pin_label_text"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/pin_first_edittext"
+                style="@style/pin_edittext_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/pin_content_desc" />
+
+            <EditText
+                android:id="@+id/pin_second_edittext"
+                style="@style/pin_edittext_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/pin_content_desc" />
+
+            <EditText
+                android:id="@+id/pin_third_edittext"
+                style="@style/pin_edittext_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/pin_content_desc" />
+
+            <EditText
+                android:id="@+id/pin_forth_edittext"
+                style="@style/pin_edittext_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/pin_content_desc" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_savepin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="10dp"
+            android:background="@color/Pancardlight"
+            android:padding="10dp"
+            android:text="Continue" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/pin_hidden_edittext"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:contentDescription="@string/pin_content_desc"
+        android:cursorVisible="false"
+        android:gravity="center_horizontal"
+        android:inputType="numberPassword"
+        android:maxLength="5"
+        android:textColor="#00000000" />
+
+</RelativeLayout>

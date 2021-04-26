@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/files_tab"
+        android:icon="@drawable/my_files_36"
+        android:title="@string/title_menu_files"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/setting_tab"
+        android:icon="@drawable/settings_36"
+        android:title="@string/title_menu_settings"
+        app:showAsAction="always" />
+</menu>
